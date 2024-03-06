@@ -1,0 +1,25 @@
+
+@for(meta of listaDeMetas; track meta.id){
+    <div [@animarLista]>
+        <app-metas [meta]="meta" ></app-metas>
+    </div>
+}
+
+<h3 class="p-4" [@animarTitulo]> Listar metas desde el backend</h3>
+@for(meta of listaDeMetasBack; track meta.id){
+    <div [@animarLista] >
+        <app-metas [meta]="meta"></app-metas>
+    </div>
+}
+
+<figure  [@animarTitulo]>
+    <img ngSrc="assets/images/angular-logo.png" width="700" height="219" priority alt="Logo De Angular Actualizado">
+</figure>
+
+<div class="p-4"  >
+    <h1 >{{dataObtenida}}</h1>
+    <h2>Nombre: {{sesion()['nombre']}}</h2>
+    <h2>Usuario: {{sesion()['usuario']}}</h2>
+    <h2>id: {{sesion()['id']}}</h2>
+    <button class="boton boton--gris" (click)="modificarSignal()" >Cambiar la señal</button>
+</div>

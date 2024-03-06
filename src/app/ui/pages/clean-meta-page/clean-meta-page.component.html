@@ -1,0 +1,14 @@
+<section>
+    @for(meta of listaMetas; track meta.id){
+        <div>
+            <app-metas [meta]="meta" ></app-metas>
+        </div>
+    }
+    <button (click)="nuevaMeta()" class="boton--gris m-4 p-1">Este es una nueva meta</button>
+
+    <h4>Url Peligrosa:</h4>
+    <p><a class="e2e-dangerous-url" [href]="dangerousUrl">Click me</a></p>
+    <h4>Url Confiable:</h4>
+    <p><a class="e2e-trusted-url" [href]="trustedUrl">Click me</a></p>
+</section>
+
